@@ -3,7 +3,7 @@
 #include <Arduino.h>
 
 // Define servo pin and mid-point angle
-
+Servo servo;
 
 // Setup function to initialize the servo
 void ServoSetup() {
@@ -12,5 +12,5 @@ void ServoSetup() {
 }
 
 void ServoLoop() {
-  
+
 }

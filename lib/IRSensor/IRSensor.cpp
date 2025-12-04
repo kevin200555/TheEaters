@@ -7,6 +7,15 @@ void IRsensorSetup() {
   pinMode(ledPin, OUTPUT); // Set LED pin as output
 }
 
-void IRsensorLoop(){
-
+int IRsensorLoop(){
+  int sensorValue = digitalRead(IRPin);
+  if(sensorValue == LOW){
+    Serial.println("Black line detected!");
+    digitalWrite(ledPin, HIGH);
+  }
+  else{
+    Serial.println("White line detected!");
+    digitalWrite(ledPin, LOW);
+  }
+  return sensorValue;
 }

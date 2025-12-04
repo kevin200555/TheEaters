@@ -7,7 +7,7 @@
 
 #define ServIn 9
 #define ServMid 90
-Servo servo;
+
 
 void ServoSetup();
 void ServoLoop();

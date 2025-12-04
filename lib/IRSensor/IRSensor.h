@@ -5,6 +5,6 @@
 #define ledPin 13 //temporary placeholder
 
 void IRsensorSetup();
-void IRsensorLoop();
+int IRsensorLoop();
 
 #endif // IRSensors.h
