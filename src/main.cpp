@@ -1,5 +1,8 @@
 #include <Arduino.h>
-
+#include "Camera.h"
+#include "Servo.h"
+#include "Motors.h"
+#include "IRSensor.h"
 // put function declarations here:
 int myFunction(int, int);
 
