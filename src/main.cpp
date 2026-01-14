@@ -22,7 +22,11 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // IN THEORY:
+  // when this code starts, the motor spins forward,  stops for a bit, then spins backwards, stops for a bit, then repeats
+  // the Camera sends some stuff in the serial monitor
+  // the IRsensors should be able to detect dark and light object (and sends to the serial monitor)
+  
   MotorsLoop();
   CameraLoop();
   int sensorValue = IRsensorLoop();
