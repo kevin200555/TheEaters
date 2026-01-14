@@ -23,6 +23,7 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  MotorsLoop();
   CameraLoop();
   int sensorValue = IRsensorLoop();
   delay(100);
