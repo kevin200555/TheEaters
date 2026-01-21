@@ -1,0 +1,42 @@
+
+This project is code for an autonomous rover. 
+
+|--lib
+|  |
+|  |--Camera
+|  |  |- Camera.cpp
+|  |  |- Camera.h
+|  |--IRSensor
+|  |  |- IRSensor.cpp
+|  |  |- IRSensor.h
+|  |--Motors
+|  |  |- Motors.cpp
+|  |  |- Motors.h
+|  |--Servo
+|  |  |- Servo.cpp
+|  |  |- Servo.h
+|  |
+|--src
+|  |--main.cpp
+|  |
+|--README --> THIS FILE
+|
+|- platformio.ini
+
+Example contents of `src/main.c` using Foo and Bar:
+```
+#include <Foo.h>
+#include <Bar.h>
+
+int main (void)
+{
+  ...
+}
+
+```
+
+The PlatformIO Library Dependency Finder will find automatically dependent
+libraries by scanning project source files.
+
+More information about PlatformIO Library Dependency Finder
+- https://docs.platformio.org/page/librarymanager/ldf.html

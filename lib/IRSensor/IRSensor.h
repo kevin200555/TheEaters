@@ -1,8 +1,8 @@
 #ifndef IRSENSOR_H
 #define IRSENSOR_H
 
-#define IRPin 2 //temporary placeholder
-#define ledPin 13 //temporary placeholder
+#define IRSensor1 5 
+#define IRSensor2 6 
 
 void IRsensorSetup();
 int IRsensorLoop();
