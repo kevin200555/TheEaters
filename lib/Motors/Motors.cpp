@@ -35,3 +35,30 @@ void MotorsLoop()
     analogWrite(EN, 0);
     delay(1000);
 }
+
+void MotorStop()
+{
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, LOW);
+    analogWrite(EN, 0);
+}
+
+void MotorForward(int speed) //specifiy speed for variable speed control
+{
+    if (speed < 0) speed = 0;
+    if (speed > 255) speed = 255;
+    
+    digitalWrite(IN1, HIGH);
+    digitalWrite(IN2, LOW);
+    analogWrite(EN, speed); // speed: 0-255
+}
+
+void MotorBackward(int speed) //specifiy speed for variable speed control
+{
+    if (speed < 0) speed = 0;
+    if (speed > 255) speed = 255;
+
+    digitalWrite(IN1, LOW);
+    digitalWrite(IN2, HIGH);
+    analogWrite(EN, speed); // speed: 0-255
+}

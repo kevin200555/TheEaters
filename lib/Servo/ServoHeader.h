@@ -5,12 +5,14 @@
 // #define PINNUMBERHERE
 // #define PINNUMBERHERE
 
-#define ServIn 9
+#define LargeServIn 8
+#define SmallServIn 7
 #define ServMid 90
 #define ServRight 180
 #define ServLeft 0
 
-void ServoSetup();
+void LargeServoSetup();
+void SmallServoSetup2();
 void ServoLoop();
 
 #endif // ServoHeader.h
