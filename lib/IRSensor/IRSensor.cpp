@@ -3,19 +3,19 @@
 
 //Setup function to initialize the IR sensor pin
 void IRsensorSetup() {
-  pinMode(IRPin, INPUT); // Set IR sensor pin as input
-  pinMode(ledPin, OUTPUT); // Set LED pin as output
+  pinMode(IRSensor1, INPUT); 
+  pinMode(IRSensor2, INPUT);
 }
 
 int IRsensorLoop(){
-  int sensorValue = digitalRead(IRPin);
-  if(sensorValue == LOW){
+  int hasBlackLine;
+  int sensorValue1 = digitalRead(IRSensor1);
+  int sensorValue2 = digitalRead(IRSensor2);
+  if(sensorValue2 == LOW or sensorValue1 == LOW){
     Serial.println("Black line detected!");
-    digitalWrite(ledPin, HIGH);
   }
   else{
     Serial.println("White line detected!");
-    digitalWrite(ledPin, LOW);
   }
-  return sensorValue;
+  return hasBlackLine;
 }

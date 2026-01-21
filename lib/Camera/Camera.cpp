@@ -1,6 +1,7 @@
 #include "Camera.h"
 #include <Arduino.h>
 Pixy2 pixy;
+
 void CameraSetup(){
     pixy.init();
 }
