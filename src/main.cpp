@@ -30,6 +30,7 @@ void loop() {
   MotorsLoop();
   CameraLoop();
   int sensorValue = IRsensorLoop();
+  ServoLoop(); //Strafes servo from leftmost position to rightmost position and back again
   delay(100);
 }
 
