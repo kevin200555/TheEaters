@@ -2,9 +2,9 @@
 #ifndef CAMERA_H
 #define CAMERA_H
 
-// #define PINNUMBERHERE
-// #define PINNUMBERHERE
 #include <Pixy2.h>
+
+Pixy2 pixy;
 
 void CameraSetup();
 void CameraLoop();

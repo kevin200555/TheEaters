@@ -1,6 +1,6 @@
 #include "Camera.h"
 #include <Arduino.h>
-Pixy2 pixy;
+
 
 void CameraSetup(){
     pixy.init();
@@ -27,6 +27,9 @@ void CameraLoop(){
                 Serial.print("Y: "); Serial.println(y);
                 Serial.print("Width: "); Serial.println(width);
                 Serial.print("Height: "); Serial.println(height);
+            }
+            else{
+
             }
         }
     }
