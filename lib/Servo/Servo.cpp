@@ -19,14 +19,14 @@ void SmallServoSetup2() {
 
 void ServoLoop() {
   for (angle = ServLeft; angle <= ServRight; angle += 10) {
-    Serial.print("Moving servo to: ");
+    //Serial.print("Moving servo to: ");
     Serial.println(angle);
     servo.write(angle); // Move servo to the specified angle
     delay(15);
   }
 
   for (angle = ServRight; angle >= ServLeft; angle -= 10) {
-    Serial.print("Moving servo to: ");
+    //Serial.print("Moving servo to: ");
     Serial.println(angle);
     servo.write(angle); // Move servo back to the specified angle
     delay(15); 

@@ -4,7 +4,8 @@
 
 #include <Pixy2.h>
 
-Pixy2 pixy;
+extern Pixy2 pixy;
+
 
 void CameraSetup();
 void CameraLoop();
