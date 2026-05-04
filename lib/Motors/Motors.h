@@ -8,5 +8,8 @@
 #define EN 3
 void MotorsSetup();
 void MotorsLoop();
+void MotorStop();
+void MotorForward(int speed);
+void MotorBackward(int speed);
 
 #endif // Motors.h

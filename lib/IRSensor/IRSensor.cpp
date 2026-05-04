@@ -7,13 +7,12 @@ void IRsensorSetup() {
 }
 
 int IRsensorLoop(){
-  int hasBlackLine;
   int sensorValue1 = digitalRead(IRSensor1);
-  if(sensorValue1 == LOW){
+  // HIGH = black line detected, LOW = white surface (varies by sensor module)
+  if(sensorValue1 == HIGH){
     Serial.println("Black line detected!");
+    return 1;
   }
-  else{
-    Serial.println("White line detected!");
-  }
-  return hasBlackLine;
+  Serial.println("White surface");
+  return 0;
 }

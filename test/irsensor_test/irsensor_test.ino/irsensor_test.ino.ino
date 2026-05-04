@@ -1,25 +1,20 @@
-// Define the pin connections
-const int irSensorPin = 7;  // IR sensor output pin connected to digital pin 7
-const int ledPin = 13;      // LED connected to digital pin 13 (optional)
+// Define Sensor Pin
+const int irSensorPin = 3; // Connect Signal pin to Pin 2
 
 void setup() {
-  pinMode(irSensorPin, INPUT);  // Set IR sensor pin as input
-  pinMode(ledPin, OUTPUT);      // Set LED pin as output (optional)
-  Serial.begin(9600);           // Begin serial communication for debugging
+  pinMode(irSensorPin, INPUT); // Initialize sensor pin
+  Serial.begin(9600);          // Serial monitor for debugging
 }
 
 void loop() {
-  int sensorValue = digitalRead(irSensorPin);  // Read the value from the IR sensor
+  int sensorValue = digitalRead(irSensorPin);
 
-  if (sensorValue == LOW) {
-    // Obstacle detected
-    digitalWrite(ledPin, HIGH);  // Turn on LED (optional)
-    Serial.println("Obstacle detected!");
+  // Often, HIGH means NO line (white) and LOW means LINE FOUND (black)
+  // This varies by sensor module manufacturer
+  if (sensorValue == HIGH) {
+    Serial.println("Black Line Detected!");
   } else {
-    // No obstacle
-    digitalWrite(ledPin, LOW);   // Turn off LED (optional)
-    Serial.println("No obstacle.");
+    Serial.println("White Surface");
   }
-
-  delay(100);  // Small delay for stability
+  delay(100);
 }
